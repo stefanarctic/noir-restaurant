@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOIR — Fine Dining</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">NOIR</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#chef">Chef</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#press">Press</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#reservations" class="nav-reserve">Reserve a Table</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#menu" onclick="closeMobile()">Menu</a>
+  <a href="#chef" onclick="closeMobile()">Chef</a>
+  <a href="#experience" onclick="closeMobile()">Experience</a>
+  <a href="#gallery" onclick="closeMobile()">Gallery</a>
+  <a href="#press" onclick="closeMobile()">Press</a>
+  <a href="#faq" onclick="closeMobile()">FAQ</a>
+  <a href="#reservations" onclick="closeMobile()">Reserve</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Est. 2018 · Paris & New York</p>
+    <h1 class="hero-title">N<em>o</em>ir</h1>
+    <p class="hero-subtitle">Where Darkness Becomes Art</p>
+    <div class="hero-divider"></div>
+    <div class="hero-cta-group">
+      <a href="#reservations" class="btn-primary">Reserve a Table</a>
+      <a href="#menu" class="btn-outline">Explore Menu</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <img class="about-img"
+        src="assets/chef.jpg"
+        alt="Chef preparing a dish" loading="lazy">
+      <img class="about-img-accent"
+        src="assets/hero-bg.jpg"
+        alt="Restaurant interior" loading="lazy">
+    </div>
+    <div class="about-text reveal">
+      <p class="section-eyebrow">Our Story</p>
+      <h2 class="section-title">Crafted in<br><em>Shadow & Light</em></h2>
+      <p>NOIR was born from a singular obsession: that the finest dining experiences are not merely consumed — they are felt. Executive Chef Élise Marceau trained under three Michelin-starred mentors before opening NOIR in 2018, weaving French technique with bold, unexpected provenance.</p>
+      <p>Every dish is a dialogue between restraint and abundance, darkness and radiance. We source exclusively from farms and fisheries we visit personally, and our menu reinvents itself with each season.</p>
+      <div class="about-stats">
+        <div>
+          <div class="stat-num">3</div>
+          <div class="stat-label">Michelin Stars</div>
+        </div>
+        <div>
+          <div class="stat-num">7</div>
+          <div class="stat-label">Years of Craft</div>
+        </div>
+        <div>
+          <div class="stat-num">12</div>
+          <div class="stat-label">Course Tasting Menu</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="menu-header reveal">
+    <p class="section-eyebrow">Culinary Journey</p>
+    <h2 class="section-title">The <em>Menu</em></h2>
+    <p>Each season brings a new chapter. Our ingredients are sourced at the peak of perfection — wild-caught, hand-foraged, and sustainably farmed — then transformed through classical French technique and daring innovation.</p>
+  </div>
+
+  <div class="menu-tabs">
+    <button class="menu-tab active" data-tab="starters">Starters</button>
+    <button class="menu-tab" data-tab="mains">Mains</button>
+    <button class="menu-tab" data-tab="desserts">Desserts</button>
+    <button class="menu-tab" data-tab="drinks">Drinks</button>
+  </div>
+
+  <!-- STARTERS -->
+  <div class="menu-panel active" id="tab-starters">
+    <div class="menu-grid">
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="assets/scallops.jpg" alt="Scallops" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Seafood</div>
+          <div class="menu-card-name">Seared Diver Scallops</div>
+          <div class="menu-card-desc">Hand-dived Scottish scallops, cauliflower velouté, crispy capers, preserved lemon, wild sea herbs</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$38</span>
+            <span class="menu-badge">Chef's Choice</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="assets/foie-gras.jpg" alt="Foie Gras" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Signature</div>
+          <div class="menu-card-name">Seared Foie Gras</div>
+          <div class="menu-card-desc">Duck liver, brioche perdu, fig and port reduction, micro amaranth, aged balsamic pearls</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$44</span>
+            <span class="menu-badge">Seasonal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Oysters" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Raw Bar</div>
+          <div class="menu-card-name">Fine de Claire Oysters</div>
+          <div class="menu-card-desc">Six Marennes-Oléron oysters, mignonette granita, caviar pearls, champagne foam</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$32</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1541014741259-de529411b96a?w=600&q=80" alt="Truffle" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Vegetarian</div>
+          <div class="menu-card-name">Black Truffle Risotto</div>
+          <div class="menu-card-desc">Carnaroli rice, aged Comté, shaved Périgord truffle, 24-month parmigiano crisp</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$52</span>
+            <span class="menu-badge">V</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80" alt="Burrata" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Vegetarian</div>
+          <div class="menu-card-name">Heirloom Burrata</div>
+          <div class="menu-card-desc">Creamy burrata, heirloom tomatoes, basil oil, aged balsamic, sourdough croutons</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$26</span>
+            <span class="menu-badge">V</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80" alt="Tuna" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Raw Bar</div>
+          <div class="menu-card-name">Yellowfin Tuna Crudo</div>
+          <div class="menu-card-desc">Line-caught tuna, yuzu kosho, avocado mousse, pickled ginger, black sesame</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$36</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MAINS -->
+  <div class="menu-panel" id="tab-mains">
+    <div class="menu-grid">
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="assets/wagyu.jpg" alt="Wagyu" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Red Meat</div>
+          <div class="menu-card-name">A5 Wagyu Tenderloin</div>
+          <div class="menu-card-desc">200g Japanese A5, bone marrow butter, pomme purée, black garlic jus, crispy shallots</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$145</span>
+            <span class="menu-badge">Signature</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=600&q=80" alt="Lobster" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Seafood</div>
+          <div class="menu-card-name">Whole Roasted Lobster</div>
+          <div class="menu-card-desc">Maine lobster, tarragon beurre blanc, fennel confit, caviar, nasturtium oil</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$98</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80" alt="Duck" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Poultry</div>
+          <div class="menu-card-name">Rohan Duck Breast</div>
+          <div class="menu-card-desc">30-day dry-aged duck, cherry and Pinot Noir sauce, celeriac gratin, watercress oil</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$72</span>
+            <span class="menu-badge">Chef's Choice</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&q=80" alt="Pasta" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Pasta</div>
+          <div class="menu-card-name">Handmade Pappardelle</div>
+          <div class="menu-card-desc">72-hour braised short rib, burrata, Amalfi lemon zest, Grana Padano, basil oil</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$58</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&q=80" alt="Lamb" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Red Meat</div>
+          <div class="menu-card-name">Rack of Lamb</div>
+          <div class="menu-card-desc">Herb-crusted New Zealand lamb, mint jus, roasted baby vegetables, dauphinoise potatoes</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$78</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=600&q=80" alt="Halibut" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Seafood</div>
+          <div class="menu-card-name">Pan-Roasted Halibut</div>
+          <div class="menu-card-desc">Atlantic halibut, brown butter, capers, charred lemon, spring pea purée</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$62</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DESSERTS -->
+  <div class="menu-panel" id="tab-desserts">
+    <div class="menu-grid">
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="assets/dessert.jpg" alt="Lava cake" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Chocolate</div>
+          <div class="menu-card-name">Valrhona Coulant</div>
+          <div class="menu-card-desc">70% dark chocolate fondant, molten center, tonka bean crème glacée, smoked salt</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$22</span>
+            <span class="menu-badge">Signature</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80" alt="Tart" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Patisserie</div>
+          <div class="menu-card-name">Citrus Tart Lumière</div>
+          <div class="menu-card-desc">Burnt Basque lemon curd, sablé breton, mandarin confit, edible flowers, meringue flame</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$18</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Cheese" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Fromage</div>
+          <div class="menu-card-name">Artisan Cheese Plateau</div>
+          <div class="menu-card-desc">Selection of five French cheeses, quince paste, honeycomb, walnut bread, microgreens</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$28</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=600&q=80" alt="Tiramisu" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Classic</div>
+          <div class="menu-card-name">Tiramisu Noir</div>
+          <div class="menu-card-desc">Espresso-soaked savoiardi, mascarpone, dark cocoa, house-made amaretto</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$16</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80" alt="Sorbet" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Palate Cleanser</div>
+          <div class="menu-card-name">Seasonal Sorbet Trio</div>
+          <div class="menu-card-desc">Three rotating flavors — blood orange, passion fruit, white peach — with fresh berries</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$14</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DRINKS -->
+  <div class="menu-panel" id="tab-drinks">
+    <div class="menu-grid">
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="assets/cocktail.jpg" alt="Cocktail" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Cocktail</div>
+          <div class="menu-card-name">The Midnight Bloom</div>
+          <div class="menu-card-desc">Hendrick's gin, elderflower liqueur, activated charcoal syrup, cucumber, rose water, citrus</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$22</span>
+            <span class="menu-badge">Signature</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=80" alt="Wine" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Wine</div>
+          <div class="menu-card-name">Sommelier's Pairing</div>
+          <div class="menu-card-desc">Six-glass wine journey curated to accompany your chosen courses by our in-house sommelier</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$95</span>
+            <span class="menu-badge">Curated</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80" alt="Champagne" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Champagne</div>
+          <div class="menu-card-name">Krug Grande Cuvée</div>
+          <div class="menu-card-desc">NV blend from over 120 different wines and 20+ different years. The house's signature expression</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$38/glass</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Espresso" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Coffee</div>
+          <div class="menu-card-name">NOIR Espresso & Digestifs</div>
+          <div class="menu-card-desc">Single-origin espresso, affogato, or classic digestifs: Cognac, Armagnac, Grappa</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$8–$24</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal">
+        <img class="menu-card-img popup-img menu-popup" src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&q=80" alt="Mocktail" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Non-Alcoholic</div>
+          <div class="menu-card-name">Garden of Shadows</div>
+          <div class="menu-card-desc">Seedlip Garden, cucumber, elderflower, lime, soda — our signature zero-proof offering</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">$14</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="menu-banner reveal">
+    <div class="menu-banner-text">
+      <h3>The Twelve-Course Tasting Menu</h3>
+      <p>A complete narrative from our kitchen — available Wednesday through Sunday, for the entire table only</p>
+    </div>
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold)">$210 <span style="font-size:1rem;color:var(--muted)">per person</span></div>
+      <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-top:0.3rem">+$95 wine pairing available</div>
+    </div>
+    <a href="#reservations" class="btn-primary">Book Tasting</a>
+  </div>
+</section>
+
+<!-- CHEF & TEAM -->
+<section id="chef">
+  <div class="chef-grid">
+    <div class="chef-img-wrap reveal">
+      <img class="chef-img" src="assets/chef.jpg" alt="Executive Chef Élise Marceau" loading="lazy">
+      <div class="chef-awards">
+        <span>3 Michelin Stars</span>
+        <span>World's 50 Best</span>
+      </div>
+    </div>
+    <div class="chef-content reveal">
+      <p class="section-eyebrow">The Visionary</p>
+      <h2 class="section-title">Executive Chef<br><em>Élise Marceau</em></h2>
+      <p>Born in Lyon and trained under legends at L'Astrance, Le Bernardin, and Noma, Chef Marceau brings a singular vision to NOIR. Her cuisine marries classical French technique with bold, seasonal ingredients and unexpected textures.</p>
+      <p>« I believe the best meals are felt, not just tasted. At NOIR, we create moments that linger long after the last bite. »</p>
+      <div class="chef-team">
+        <h4>Our Kitchen</h4>
+        <ul>
+          <li><strong>Sous Chef</strong> — Antoine Dubois</li>
+          <li><strong>Pastry Chef</strong> — Marie Lefèvre</li>
+          <li><strong>Head Sommelier</strong> — Jean-Pierre Moreau</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="experience-grid">
+    <img class="experience-img"
+      src="assets/hero-bg.jpg"
+      alt="Restaurant interior" loading="lazy">
+    <div class="experience-content">
+      <p class="section-eyebrow">The Atmosphere</p>
+      <h2 class="section-title">Beyond the<br><em>Plate</em></h2>
+      <p>NOIR is designed as a total sensory experience. Our dining room — styled by architect Cécile Beaumont — envelops guests in shadow and gold, where every surface is considered and every detail purposeful.</p>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-icon">♦</div>
+          <div class="feature-text">
+            <h4>Private Dining Room</h4>
+            <p>Exclusive room for up to 14 guests. Ideal for corporate events, celebrations, and intimate gatherings.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">♦</div>
+          <div class="feature-text">
+            <h4>Chef's Counter</h4>
+            <p>Six seats at the kitchen pass. Watch our chefs work their craft in real time — the most theatrical dining in the house.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">♦</div>
+          <div class="feature-text">
+            <h4>Sommelier Experience</h4>
+            <p>Our wine cellar holds over 2,400 labels. Let our in-house sommelier build a pairing journey unique to you.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">♦</div>
+          <div class="feature-text">
+            <h4>Live Jazz Thursdays</h4>
+            <p>Every Thursday evening, the room is accompanied by an intimate jazz quartet from 8pm.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-header reveal">
+    <p class="section-eyebrow">Visual Journal</p>
+    <h2 class="section-title">Inside <em>NOIR</em></h2>
+  </div>
+  <div class="gallery-masonry">
+    <div class="gallery-item">
+      <img class="gallery-img popup-img gallery-popup" src="assets/hero-bg.jpg" alt="Restaurant" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img class="gallery-img popup-img gallery-popup" src="assets/scallops.jpg" alt="Dish" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img class="gallery-img popup-img gallery-popup" src="assets/dessert.jpg" alt="Dessert" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img class="gallery-img popup-img gallery-popup" src="assets/wagyu.jpg" alt="Food" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img class="gallery-img popup-img gallery-popup" src="assets/chef.jpg" alt="Chef" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img class="gallery-img popup-img gallery-popup" src="assets/cocktail.jpg" alt="Cocktail" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img class="gallery-img popup-img gallery-popup" src="assets/foie-gras.jpg" alt="Foie Gras" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img class="gallery-img popup-img gallery-popup" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80" alt="Dining room" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter">
+  <div class="newsletter-wrap reveal">
+    <p class="section-eyebrow">Stay Connected</p>
+    <h2 class="section-title">Join the <em>NOIR</em> Circle</h2>
+    <p>Be the first to know about seasonal menus, exclusive events, and Chef Marceau's latest creations.</p>
+    <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+      <input type="email" placeholder="Your email" required>
+      <button type="submit" class="btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section id="press">
+  <div class="press-wrap reveal">
+    <p class="section-eyebrow">As Seen In</p>
+    <h2 class="section-title">Press & <em>Recognition</em></h2>
+    <div class="press-logos">
+      <span class="press-name">Le Monde</span>
+      <span class="press-name">The New York Times</span>
+      <span class="press-name">Condé Nast Traveler</span>
+      <span class="press-name">Food & Wine</span>
+      <span class="press-name">Gault & Millau</span>
+    </div>
+    <div class="press-quote">
+      <blockquote>"NOIR redefines what fine dining can be — a journey through shadow and light, where every course tells a story."</blockquote>
+      <cite>— Le Monde, 2024</cite>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="testimonials-header reveal">
+    <p class="section-eyebrow">Guest Words</p>
+    <h2 class="section-title">What They <em>Say</em></h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-text">"The most extraordinary meal of my life. NOIR doesn't just feed you — it transports you to another world."</div>
+      <div class="testimonial-author">— Isabelle M., Paris</div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-text">"Chef Marceau's A5 Wagyu is a religious experience. The atmosphere alone is worth the journey from London."</div>
+      <div class="testimonial-author">— James T., London</div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-text">"The tasting menu is twelve acts of genius. I have dined at restaurants on four continents — NOIR stands alone."</div>
+      <div class="testimonial-author">— Sophia K., New York</div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="awards-wrap reveal">
+    <p class="section-eyebrow">Recognition</p>
+    <h2 class="section-title">Awards & <em>Honors</em></h2>
+    <div class="awards-grid">
+      <div class="award-item">
+        <div class="award-icon">★</div>
+        <h4>3 Michelin Stars</h4>
+        <p>Since 2022</p>
+      </div>
+      <div class="award-item">
+        <div class="award-icon">◆</div>
+        <h4>World's 50 Best Restaurants</h4>
+        <p>#24 — 2024</p>
+      </div>
+      <div class="award-item">
+        <div class="award-icon">✦</div>
+        <h4>Best Restaurant in France</h4>
+        <p>La Liste 2024</p>
+      </div>
+      <div class="award-item">
+        <div class="award-icon">♦</div>
+        <h4>Wine Spectator Grand Award</h4>
+        <p>2,400+ labels</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-wrap">
+    <div class="faq-header reveal">
+      <p class="section-eyebrow">Questions</p>
+      <h2 class="section-title">Frequently <em>Asked</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq-q1">
+          <span>What is the dress code?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" id="faq1" role="region" aria-labelledby="faq-q1">
+          <p>Smart casual to formal. We recommend jackets for gentlemen. We kindly ask that guests avoid shorts, flip-flops, and athletic wear.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq-q2">
+          <span>Do you accommodate dietary restrictions?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" id="faq2" role="region" aria-labelledby="faq-q2">
+          <p>Yes. Please note any allergies, intolerances, or dietary preferences when making your reservation. Our team will prepare suitable alternatives for the tasting menu or à la carte.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq-q3">
+          <span>Is there a cancellation policy?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" id="faq3" role="region" aria-labelledby="faq-q3">
+          <p>Reservations may be cancelled or modified up to 48 hours before your booking without charge. Cancellations within 48 hours may incur a fee of $150 per person for the tasting menu.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq4" id="faq-q4">
+          <span>Can I host a private event?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" id="faq4" role="region" aria-labelledby="faq-q4">
+          <p>Our private dining room accommodates up to 14 guests. For larger events, we offer full restaurant buyouts. Contact events@noirdining.com for bespoke proposals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATIONS -->
+<section id="reservations">
+  <div class="reservation-wrap">
+    <div class="reveal">
+      <p class="section-eyebrow">Reserve Your Table</p>
+      <h2 class="section-title">Join Us for an<br><em>Evening</em></h2>
+      <p>We recommend booking at least two weeks in advance. For parties of six or more, or private dining enquiries, please contact us directly.</p>
+    </div>
+    <form class="reservation-form reveal" onsubmit="handleReservation(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Élise" required>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Marceau" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="+1 (555) 000-0000">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" required>
+        </div>
+        <div class="form-group">
+          <label>Time</label>
+          <select required>
+            <option value="">Select time</option>
+            <option>18:00 — 6:00 PM</option>
+            <option>18:30 — 6:30 PM</option>
+            <option>19:00 — 7:00 PM</option>
+            <option>19:30 — 7:30 PM</option>
+            <option>20:00 — 8:00 PM</option>
+            <option>20:30 — 8:30 PM</option>
+            <option>21:00 — 9:00 PM</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Guests</label>
+          <select required>
+            <option>1 guest</option>
+            <option>2 guests</option>
+            <option>3 guests</option>
+            <option>4 guests</option>
+            <option>5 guests</option>
+            <option>6+ guests (private dining)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Experience</label>
+          <select>
+            <option>À la Carte</option>
+            <option>Tasting Menu (12 courses)</option>
+            <option>Chef's Counter</option>
+            <option>Private Dining Room</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group form-full">
+          <label>Special Requests / Dietary Notes</label>
+          <textarea placeholder="Allergies, celebrations, accessibility needs..."></textarea>
+        </div>
+      </div>
+      <button type="submit" class="form-submit">Confirm Reservation</button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-block reveal">
+      <h3>Find Us</h3>
+      <p>
+        42 Rue des Ombres<br>
+        75008 Paris, France<br><br>
+        <a href="tel:+33145678900">+33 1 45 67 89 00</a><br>
+        <a href="mailto:reservations@noirdining.com">reservations@noirdining.com</a>
+      </p>
+      <div style="margin-top:1.5rem">
+        <a href="#" style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:2px">Get Directions →</a>
+      </div>
+    </div>
+    <div class="contact-block reveal">
+      <h3>Hours</h3>
+      <div class="hours-row"><span class="hours-day">Tuesday – Thursday</span><span class="hours-time">6:00 – 10:30 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Friday – Saturday</span><span class="hours-time">5:30 – 11:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">6:00 – 10:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">Closed</span></div>
+      <p style="margin-top:1.2rem;font-size:0.72rem;color:rgba(107,101,88,0.6)">Kitchen closes 45 minutes before closing time. Last reservations at 9:30 PM.</p>
+    </div>
+    <div class="contact-block reveal">
+      <h3>Private Events</h3>
+      <p>Host your most important moments at NOIR. Whether an intimate proposal, a board dinner, or a milestone birthday — our events team will orchestrate every detail.</p>
+      <div style="margin-top:1.5rem">
+        <a href="mailto:events@noirdining.com" style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:2px">Enquire →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">NOIR</div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#chef">Chef</a>
+    <a href="#reservations">Reservations</a>
+    <a href="#press">Press</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="#newsletter">Newsletter</a>
+    <a href="#">Careers</a>
+  </div>
+  <div class="footer-social">
+    <a class="social-btn" href="#" aria-label="Instagram">✦</a>
+    <a class="social-btn" href="#" aria-label="Facebook">f</a>
+    <a class="social-btn" href="#" aria-label="Twitter">𝕏</a>
+  </div>
+  <div class="footer-copy">
+    © 2025 NOIR Fine Dining. All rights reserved. · 42 Rue des Ombres, Paris · Crafted with obsession.
+  </div>
+</footer>
+
+<!-- LIGHTBOX (Gallery) -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+  <button class="lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <span class="lightbox-counter" id="lightboxCounter"></span>
+</div>
+
+<!-- DISH MODAL (Menu) -->
+<div id="dishModal" class="dish-modal" aria-hidden="true">
+  <button class="dish-modal-close" id="dishModalClose" aria-label="Close">×</button>
+  <div class="dish-modal-content">
+    <div class="dish-modal-img-wrap">
+      <img class="dish-modal-img" id="dishModalImg" src="" alt="">
+    </div>
+    <div class="dish-modal-body">
+      <div class="dish-modal-tag" id="dishModalTag"></div>
+      <h3 class="dish-modal-name" id="dishModalName"></h3>
+      <div class="dish-modal-divider"></div>
+      <p class="dish-modal-desc" id="dishModalDesc"></p>
+      <div class="dish-modal-footer">
+        <span class="dish-modal-price" id="dishModalPrice"></span>
+        <span class="dish-modal-badge" id="dishModalBadge"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
